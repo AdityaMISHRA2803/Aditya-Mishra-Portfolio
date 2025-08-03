@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import "../styles/Contact.css";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -20,7 +19,7 @@ function Contact() {
     setStatus("Sending...");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/contact", formData);
+      const res = await axios.post("https://aditya-mishra-portfolio-1.onrender.com/api/contact", formData);
       if (res.data.success) {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
@@ -70,7 +69,11 @@ function Contact() {
           <button type="submit">Send Message</button>
         </form>
 
-        {status && <p style={{ textAlign: "center", marginTop: "1rem", color: "#4F46E5" }}>{status}</p>}
+        {status && (
+          <p style={{ textAlign: "center", marginTop: "1rem", color: "#4F46E5" }}>
+            {status}
+          </p>
+        )}
       </div>
     </div>
   );
