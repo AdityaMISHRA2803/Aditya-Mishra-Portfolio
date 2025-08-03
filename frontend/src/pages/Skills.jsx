@@ -1,7 +1,6 @@
 
 
 import React from "react";
-import "../styles/Skills.css";
 
 const skills = [
   { name: "C++", icon: "🧠" },
