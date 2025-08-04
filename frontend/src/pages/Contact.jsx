@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function Contact() {
@@ -21,7 +21,10 @@ function Contact() {
     setStatus("Sending...");
 
     try {
-      const res = await axios.post("https://aditya-mishra-portfolio-1.onrender.com/api/contact", formData);
+      const res = await axios.post(
+        "https://aditya-mishra-portfolio-1.onrender.com/api/contact",
+        formData
+      );
       if (res.data.success) {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
@@ -51,6 +54,7 @@ function Contact() {
 
           <div className="space-y-3 text-gray-700 dark:text-gray-300">
             <p><strong>Email:</strong> aditya.iiitsp@gmail.com</p>
+            <p><strong>Phone:</strong> <a href="tel:9625042281" className="hover:underline">9625042281</a></p>
             <p><strong>Location:</strong> Delhi, India</p>
           </div>
 
