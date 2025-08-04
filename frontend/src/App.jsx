@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
-import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
+import Home from "./pages/home";
 import './App.css';
 
 function App() {
@@ -12,10 +12,10 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<About />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/About" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

@@ -12,10 +12,10 @@ function Navbar() {
     <nav className="navbar">
       <div className="logo">MyPortfolio</div>
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        <Link to="/">About</Link>
+        <Link to="/">Home</Link>
+        <Link to="/About">About</Link>
         <Link to="/skills">Skills</Link>
         <Link to="/projects">Projects</Link>
-        <Link to="/experience">Experience</Link>
         <Link to="/contact">Contact</Link>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
