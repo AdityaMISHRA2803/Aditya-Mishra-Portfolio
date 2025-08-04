@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import "./Navbar.css";
 
 function Navbar() {
@@ -14,11 +14,11 @@ function Navbar() {
       <div className="logo">MyPortfolio</div>
 
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        <Link to="/" onClick={closeMenu}>Home</Link>
-        <Link to="/about" onClick={closeMenu}>About</Link>
-        <Link to="/skills" onClick={closeMenu}>Skills</Link>
-        <Link to="/projects" onClick={closeMenu}>Projects</Link>
-        <Link to="/contact" onClick={closeMenu}>Contact</Link>
+        <ScrollLink to="home" smooth={true} duration={500} onClick={closeMenu}>Home</ScrollLink>
+        <ScrollLink to="about" smooth={true} duration={500} onClick={closeMenu}>About</ScrollLink>
+        <ScrollLink to="skills" smooth={true} duration={500} onClick={closeMenu}>Skills</ScrollLink>
+        <ScrollLink to="projects" smooth={true} duration={500} onClick={closeMenu}>Projects</ScrollLink>
+        <ScrollLink to="contact" smooth={true} duration={500} onClick={closeMenu}>Contact</ScrollLink>
       </div>
 
       <div className="hamburger" onClick={toggleMenu}>

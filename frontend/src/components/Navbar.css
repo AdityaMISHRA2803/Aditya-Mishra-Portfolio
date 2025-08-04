@@ -70,3 +70,7 @@
     display: flex;
   }
 }
+.active-link {
+  color: #00bcd4; /* cyan or your theme color */
+  font-weight: bold;
+}
